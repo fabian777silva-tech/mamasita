@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poke</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #6954dd 0%, #d3509c 100%);
+            min-height: 100vh;
+            padding: 20px;
+            color: #333;
+        }
+
+        .caja {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .rectangulo-titulo {
+            text-align: center;
+            margin-bottom: 40px;
+            background: rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+        }
+
+        .texto-rectangulo-titulo h1 {
+            font-size: 3rem;
+            color: #530f72;
+            font-weight: bold;
+            text-shadow: 2px 2px 2px rgba(54, 52, 52, 0.5);
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            color: #c01a1a;
+            opacity: 0.9;
+        }
+
+        .filas-columnas {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 20px 0;
+        }
+
+        .carta-poke {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+
+        }
+
+        .titulo-carta-poke {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .nombre-pokémon {
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #530f72;
+        }
+
+        .imágenes {
+            width: 150px;
+            height: 150px;
+            object-fit: contain;
+            border-radius: 15px;
+            background-color: rgba(95, 6, 83, 0.5);
+            padding: 10px;
+            margin: 0 auto 20px;
+            display: block;
+
+        }
+
+
+        .información-pokémones {
+            background: #ffffff;
+            border-radius: 15px;
+            padding: 20px;
+            margin-top: 15px;
+
+        }
+
+        .espacios {
+            display: grid;
+            justify-content: left;
+            margin-bottom: 10px;
+            padding: 8px 0;
+            border-bottom: 2px solid #b9b3b1;
+        }
+
+        .espacios-porcentaje {
+            justify-content:center;
+            display: flexbox;
+            padding: 8px 0;
+        }
+
+        .color-primera-info {
+            color: #530f72;
+            font-weight: bold;
+        }
+
+        .texto {
+            color: black
+        }
+
+        .parrafos-información{
+            text-align: justify center;
+            font-style: italic;
+            margin: left 50px;
+        }
+
+        .subtexto-rectangulo {
+            color: rgba(0, 0, 0, 0.8)
+        }
+
+        .stats-container {
+            display: flexbox;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            padding: 8px 0;
+            border-bottom: 1px solid #b9b3b1;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="caja">
+        <div class="rectangulo-titulo">
+            <div class="texto-rectangulo-titulo">
+                <span class="subtexto-rectangulo">
+                    <h1> Pokédex Digital </h1>
+                    <p>Descubre la información completa de tus Pokémones favoritos</p>
+                </span>
+            </div>
+        </div>
+
+        <div class="filas-columnas">
+            <!-- Pikachu -->
+            <div class="carta-poke">
+                <div class="titulo-carta-poke">
+                    <h2 class="nombre-pokémon">Pikachu</h2>
+                    <img src="pikachu.png" alt="Pikachu" class="imágenes">
+                </div>
+                    <audio controls>
+                        <source src="pikachu.mp3" type="audio/mp3">
+                    </audio>
+                    <div class="información-pokémones">
+                                <div class="espacios">
+                                    <span class="color-primera-info">Número:</span>
+                                    <span class="texto">#025</span>
+                                </div>
+                                <div class="espacios">
+                                    <span class="color-primera-info">Tipo:</span>
+                                    <span class="texto">Eléctrico</span>
+                                </div>
+                                <div class="espacios">
+                                    <span class="color-primera-info">Altura:</span>
+                                    <span class="texto">0.4 m</span>
+                                </div>
+                                <div class="espacios">
+                                    <span class="color-primera-info">Peso:</span>
+                                    <span class="texto">6.0 kg</span>
+                                </div>
+                                <div class="espacios">
+                                    <span class="color-primera-info">Habilidad:</span>
+                                    <span class="texto">Electricidad Estática</span>
+                                </div>
+                        </div>
+                            <div class="parrafos-información">
+                                <p>
+                                Este Pokémon tiene bolsas eléctricas en sus mejillas. Cuando se enfada, libera descargas eléctricas.
+                                Es muy popular por su personalidad amigable y leal. </p>    
+                            </div>
+                            <div class="espacios-porcentaje">
+                                <span class="color-primera-info">Ataque:</span>
+                                <span class="texto">55%</span>
+                            </div>
+                            <div class="espacios-porcentaje">
+                                <span class="color-primera-info">Defensa:</span>
+                                <span class="texto">40%</span>
+                            </div>
+                            <div class="espacios-porcentaje">
+                                <span class="color-primera-info">Velocidad:</span>
+                                <span class="texto">90%</span>
+                            </div>
+                    </div>
+
+                    <!-- Charizard -->
+                    <div class="carta-poke">
+                        <div class="titulo-carta-poke">
+                            <h2 class="nombre-pokémon">Charizard</h2>
+                            <img src="charizar.png"="Charizard" class="imágenes">
+                        </div>
+                            <audio controls>
+                                <source src="charizard.mp3" type="audio/mp3">
+                            </audio>
+                            <div class="información-pokémones">
+                                <div class="espacios">
+                                    <span class="color-primera-info">Número:</span>
+                                    <span class="texto">#006</span>
+                                </div>
+                                <div class="espacios">
+                                    <span class="color-primera-info">Tipo:</span>
+                                    <span class="texto">Fuego</span>
+                                </div>
+                                <div class="espacios">
+                                    <span class="color-primera-info">Altura:</span>
+                                    <span class="texto">1.7 m</span>
+                                </div>
+                                <div class="espacios">
+                                    <span class="color-primera-info">Peso:</span>
+                                    <span class="texto">90.5 kg</span>
+                                </div>
+                                <div class="espacios">
+                                    <span class="color-primera-info">Habilidad:</span>
+                                    <span class="texto">Mar Llamas</span>
+                                </div>
+                        </div>
+                            <div class="parrafos-información">
+                                <p>
+                                Escupe fuego que es lo bastante caliente como para fundir cualquier cosa. Su fuego se vuelve más
+                                intenso cuando tiene experiencia en combate.</p>
+                            </div>
+                            <div class="espacios-porcentaje">
+                                <span class="color-primera-info">Ataque:</span>
+                                <span class="texto">84%</span>
+                            </div>
+                            <div class="espacios-porcentaje">
+                                <span class="color-primera-info">Defensa:</span>
+                                <span class="texto">78%</span>   
+                            </div>
+                            <div class="espacios-porcentaje">
+                                <span class="color-primera-info">Velocidad:</span>
+                                <span class="texto">90%</span>
+                            </div>
+                            
+                        </div>
+                            
+                        <!-- Charmander -->
+                        <div class="carta-poke">
+                            <div class="titulo-carta-poke">
+                                <h2 class="nombre-pokémon">Charmander</h2>
+                                <img src="charmander.png" alt="Charmander" class="imágenes">
+                            </div>
+                                <audio controls>
+                                    <source src="charmander.mp3" type="audio/mp3">
+                                </audio>
+                                <div class="información-pokémones">
+                                <div class="espacios">
+                                    <span class="color-primera-info">Número:</span>
+                                    <span class="texto">#004</span>
+                                </div>
+                                <div class="espacios">
+                                    <span class="color-primera-info">Tipo:</span>
+                                    <span class="texto">Fuego</span>
+                                </div>
+                                <div class="espacios">
+                                    <span class="color-primera-info">Altura:</span>
+                                    <span class="texto">0.6 m</span>
+                                </div>
+                                <div class="espacios">
+                                    <span class="info-label">Peso:</span>
+                                    <span class="texto">8.5 kg</span>
+                                </div>
+                                <div class="espacios">
+                                    <span class="info-label">Habilidad:</span>
+                                    <span class="texto">Mar Llamas</span>
+                                </div>
+                        </div>
+                            <div class="parrafos-información">
+                                <p>
+                                La llama de su cola indica sus emociones. Parpadea cuando está contento y arde con fuerza cuando
+                                está enfadado. Si la llama se apaga, muere.</p>
+                            </div>
+                            <div class="espacios-porcentaje">
+                                    <span class="color-primera-info">Ataque:</span>
+                                    <span class="texto">52%</span>
+                                </div>
+                                <div class="espacios-porcentaje">
+                                    <span class="color-primera-info">Defensa:</span>
+                                    <span class="texto">43%</span>
+                                </div>
+                                <div class="espacios-porcentaje">
+                                    <span class="color-primera-info">Velocidad:</span>
+                                    <span class="texto">65%</span>
+                                </div>   
+                        </div>
+
+                    <!-- Bulbasaur -->
+                    <div class="carta-poke">
+                        <div class="titulo-carta-poke">
+                            <h2 class="nombre-pokémon">Bulbasaur</h2>
+                            <img src="bulbasaur.png" alt="Bulbasaur" class="imágenes">
+                        </div>
+                            <audio controls>
+                                <source src="bulbasaur.mp3" type="audio/mp3">
+                            </audio>
+                            <div class="información-pokémones">
+                            <div class="espacios">
+                                <span class="color-primera-info">Número:</span>
+                                <span class="text">#001</span>
+                            </div>
+                            <div class="espacios">
+                                <span class="color-primera-info">Tipo:</span>
+                                <span class="text">Planta, veneno</span>
+                                <span class="text">Veneno</span>
+                            </div>
+                            <div class="espacios">
+                                <span class="color-primera-info">Altura:</span>
+                                <span class="text">0.7 m</span>
+                            </div>
+                            <div class="espacios">
+                                <span class="color-primera-info">Peso:</span>
+                                <span class="text">6.9 kg</span>
+                            </div>
+                            <div class="espacios">
+                                <span class="color-primera-info">Habilidad:</span>
+                                <span class="text">Espesura</span>
+                            </div>
+                    </div>
+                        <div class="parrafos-información"> 
+                            <p>
+                            Puede pasar días sin comer gracias a que el bulbo de su lomo almacena energía. Cuando el bulbo crece
+                            mucho, pierde la capacidad de ponerse en pie.</p>
+                        </div>
+                        <div class="espacios-porcentaje">
+                                <span class="color-primera-info">Ataque:</span>
+                                <span class="texto">49%</span>
+                            </div>
+                            <div class="espacios-porcentaje">
+                                <span class="color-primera-info">Defensa:</span>
+                                <span class="texto">49%</span>
+                            </div>
+                            <div class="espacios-porcentaje">
+                                <span class="color-primera-info">Velocidad:</span>
+                                <span class="texto">45%</span>
+                            </div>   
+                    </div>
+                
+
+                    <!-- Mewtwo -->
+                    <div class="carta-poke">
+                        <div class="titulo-carta-poke">
+                            <h2 class="nombre-pokémon">Mewtwo</h2>
+                            <img src="mewtwo.png" alt="Mewtwo" class="imágenes">
+                        </div>
+                            <audio controls>
+                                <source src="mewtwo.mp3" type="audio/mp3">
+                            </audio>
+                            <div class="información-pokémones">
+                            <div class="espacios">
+                                <span class="color-primera-info">Número:</span>
+                                <span class="texto">#150</span>
+                            </div>
+                            <div class="espacios">
+                                <span class="color-primera-info">Tipo:</span>
+                                <span class="texto">Psíquico</span>
+                            </div>
+                            <div class="espacios">
+                                <span class="color-primera-info">Altura:</span>
+                                <span class="texto">2.0 m</span>
+                            </div>
+                            <div class="espacios">
+                                <span class="color-primera-info">Peso:</span>
+                                <span class="texto">122.0 kg</span>
+                            </div>
+                            <div class="espacios">
+                                <span class="color-primera-info">Habilidad:</span>
+                                <span class="texto">Presión</span>
+                            </div>
+                    </div>
+                    <div class="parrafos-información">
+                        <p>
+                        Fue creado por un científico tras años de horribles experimentos de ingeniería genética. Su corazón
+                        salvaje solo piensa en luchar.</p>
+                    </div>
+                    <div class="espacios-porcentaje">
+                        <span class="color-primera-info">Ataque:</span>
+                        <span class="texto">110%</span>
+                    </div>
+                    <div class="espacios-porcentaje">
+                        <span class="color-primera-info">Defensa:</span>
+                        <span class="texto">90%</span>
+                    </div>
+                    <div class="espacios-porcentaje">
+                        <span class="color-primera-info">Velocidad:</span>
+                        <span class="texto">130%</span>
+                    </div>
+                </div>
+                
+            </div>
+            
+        </div>
+        </body>
+        </html>
